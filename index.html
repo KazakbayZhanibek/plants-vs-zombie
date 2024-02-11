@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+
+	<div style="position: absolute; display: none;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/RVnSo4Vuqv4?si=hxRI4pXKd0A7CfzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left: 590px; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 600px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 600px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 600px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 600px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1050px; ">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1060px; ">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1070px; ">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1080px; ">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1090px; ">
+	</div>
+
+<script>
+	let shooters = document.querySelectorAll(".shooter")
+
+
+	let divleft2 = 600;
+	let sh1 = 590; 
+	let sh2 = 600
+	let sh3 = 600;
+	let sh4 = 600;
+	let sh5 = 600; 
+
+   let zombiess = document.querySelectorAll(".zombies")
+
+
+   let divleft1 = 600; 
+   let zl = 1200;
+   let zr1 = 1050;
+   let zr2 = 1060;	
+   let zr3 = 1070;	
+   let zr4 = 1080;	
+   let zr5 = 1090;		
+
+   zombiess[0].onclick = function() {	
+   			zr1 = zr1 - 100;
+   			if(zr1 <  600){ 
+   			alert("Молодец !!!")
+   			shooters[0].style.display = "none"
+   			zombiess[0].style.display = "none"
+
+   		} 
+
+  		 zombiess[0].style.left = zr1 + "px"
+   }
+
+
+  	zombiess[1].onclick = function() { 
+  	  			zr2 = zr2 - 100;
+  	  			if(zr2 <  600){ 
+   			alert("Продолжай в том же духе !!!")
+   			shooters[1].style.display = "none"
+   			zombiess[1].style.display = "none"
+   		}
+
+  		 zombiess[1].style.left = zr2 + "px"
+   }
+
+   zombiess[2].onclick = function() {
+  		  		zr3 = zr3 - 100;
+  		  		if(zr3 <  600){ 
+   		   alert("Моооооозгиииии!!!")
+   			shooters[2].style.display = "none"
+   			zombiess[2].style.display = "none"
+   		}
+  		 zombiess[2].style.left = zr3 + "px"
+   }
+
+
+  	zombiess[3].onclick = function() { 
+  		  		zr4 = zr4 - 100;
+  		  		if(zr4 <  600){ 
+   			alert("МММ как вкусно!!!")
+   			shooters[3].style.display = "none"
+   			zombiess[3].style.display = "none"
+   		}
+  		 zombiess[3].style.left = zr4 + "px"
+   }
+
+
+  	zombiess[4].onclick = function() { 
+  		  		zr5 = zr5 - 100;
+  		  		if(zr5 <  600){ 
+   			alert("Давай еще ?")
+   			shooters[4].style.display = "none"
+   			zombiess[4].style.display = "none"
+   		}
+  		 zombiess[4].style.left = zr5 + "px"
+   }
+
+
+  
+
+
+
+
+</script>
+</body>
+</html>
+  
